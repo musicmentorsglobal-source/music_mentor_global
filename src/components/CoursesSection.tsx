@@ -10,7 +10,7 @@ const courses = [
 
 const CoursesSection = () => {
   return (
-    <section id="courses" className="py-16 md:py-24 bg-background">
+    <section id="courses" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">

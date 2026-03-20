@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="font-script text-primary text-2xl">Testimonials</span>

@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-foreground text-primary-foreground py-2 text-sm hidden md:block">
+      <div className="glass-header text-foreground py-2 text-sm hidden md:block">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex items-center gap-6">
             <a href="tel:+917200636000" className="flex items-center gap-2 hover:text-primary transition-colors">
@@ -50,7 +50,11 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background shadow-lg" : "bg-background/95 shadow-sm"}`}>
+      <nav
+        className={`sticky top-0 z-50 transition-all duration-300 glass-header ${
+          isScrolled ? "shadow-lg" : "shadow-sm"
+        }`}
+      >
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="#hero">
             <img src="/images/logo.png" alt="Tune In School of Music" className="h-14 md:h-16" />
@@ -84,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-background border-t border-border px-4 pb-4">
+          <div className="lg:hidden glass-header px-4 pb-4">
             <ul className="flex flex-col gap-3 pt-3">
               {navLinks.map((link) => (
                 <li key={link.label}>

@@ -4,7 +4,7 @@ const images = Array.from({ length: 8 }, (_, i) => `/images/gallery-${i + 1}.png
 
 const GallerySection = () => {
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-background">
+    <section id="gallery" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="font-script text-primary text-2xl">Gallery</span>

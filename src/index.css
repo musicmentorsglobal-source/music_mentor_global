@@ -46,6 +46,9 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* App background (change this to shift the orange glow everywhere) */
+    --app-glow: var(--primary);
   }
 
   .dark {
@@ -68,6 +71,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 13 79% 54%;
+
+    --app-glow: var(--primary);
   }
 }
 
@@ -77,7 +82,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply text-foreground font-poppins;
+    position: relative;
+
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(900px circle at 85% 92%, hsl(var(--app-glow) / 0.35), transparent 55%),
+      radial-gradient(700px circle at 10% 15%, hsl(var(--app-glow) / 0.12), transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   html {
@@ -85,9 +100,36 @@
   }
 }
 
+/* Subtle fixed "glassy" highlight layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(700px circle at 30% 10%, rgba(255, 255, 255, 0.35), transparent 60%),
+    radial-gradient(900px circle at 70% 85%, rgba(255, 255, 255, 0.18), transparent 65%);
+  filter: blur(40px);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
 @layer utilities {
   .font-script {
     font-family: 'Dancing Script', cursive;
+  }
+
+  .glass-header {
+    background:
+      radial-gradient(600px circle at 85% 0%, hsl(var(--app-glow) / 0.18), transparent 60%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
   }
 }
 

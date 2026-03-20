@@ -1,14 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
+import { useMemo } from "react";
 
 const AboutSection = () => {
+  const inViewOptions = useMemo(() => ({ threshold: 0.35 }), []);
+  const { ref: imagesRef, inView } = useInView<HTMLDivElement>(inViewOptions, true);
+
   return (
-    <section id="about" className="py-16 md:py-24 bg-background">
+    <section id="about" className="py-16 md:py-24 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Images */}
           <div className="relative">
-            <div className="relative max-w-md mx-auto lg:mx-0">
+            <div ref={imagesRef} className="relative max-w-md mx-auto lg:mx-0">
               <img
                 src="/images/about-1.png"
                 alt="Music students performing"
@@ -17,7 +22,14 @@ const AboutSection = () => {
               <img
                 src="/images/about-2.png"
                 alt="Music class in session"
-                className="absolute -bottom-8 -right-8 w-48 md:w-56 rounded-2xl shadow-xl border-4 border-background hidden md:block"
+                className={[
+                  "absolute -bottom-8 -right-8 w-48 md:w-56 rounded-2xl shadow-xl border-4 hidden md:block",
+                  "border-primary/60 ring-1 ring-primary/15",
+                  "will-change-transform",
+                  inView
+                    ? "animate-in fade-in slide-in-from-left-16 duration-700 ease-out"
+                    : "opacity-0 -translate-x-16",
+                ].join(" ")}
               />
               {/* Play Button */}
               <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
