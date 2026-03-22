@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import MusicCornerDecor from "@/components/MusicCornerDecor";
 
 const blogs = [
   {
@@ -51,11 +52,12 @@ const BlogSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="blog" className="py-16 md:py-24 bg-transparent">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
+      <MusicCornerDecor />
+      <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-12">
           <span className="font-script text-primary text-2xl">Blog & News</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3">
             Our Latest News & Articles
           </h2>
         </div>
@@ -64,7 +66,7 @@ const BlogSection = () => {
           <div className="flex -ml-6">
             {blogs.map((blog, index) => (
               <div key={index} className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-6">
-                <div className="bg-background rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                <div className="bg-white/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-white/80">
                   <div className="overflow-hidden">
                     <img
                       src={blog.image}
@@ -75,12 +77,12 @@ const BlogSection = () => {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3 text-sm">
-                      <span className="text-muted-foreground">{blog.date}</span>
+                      <span className="text-[#6b5f7d]">{blog.date}</span>
                       <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
                         {blog.category}
                       </span>
                     </div>
-                    <h3 className="text-foreground font-bold text-lg mb-4 leading-snug">
+                    <h3 className="text-[#54456f] font-bold text-lg mb-4 leading-snug">
                       {blog.title}
                     </h3>
                     <a

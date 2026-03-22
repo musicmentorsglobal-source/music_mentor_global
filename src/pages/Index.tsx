@@ -1,30 +1,27 @@
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
+import ReferenceBeautyHero from "@/components/ReferenceBeautyHero";
 import AboutSection from "@/components/AboutSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import CoursesSection from "@/components/CoursesSection";
-import StatsCounter from "@/components/StatsCounter";
+import ContactDetailsSection from "@/components/ContactDetailsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GallerySection from "@/components/GallerySection";
-import ExamsCTA from "@/components/ExamsCTA";
 import BlogSection from "@/components/BlogSection";
-import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <HeroSection />
+      <ReferenceBeautyHero />
       <AboutSection />
       <WhyChooseUs />
       <CoursesSection />
-      <StatsCounter />
       <TestimonialsSection />
       <GallerySection />
-      <ExamsCTA />
+      {/* <ExamsCTA /> */}
       <BlogSection />
-      <ContactCTA />
+      <ContactDetailsSection />
       <Footer />
     </div>
   );

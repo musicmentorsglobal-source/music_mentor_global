@@ -1,3 +1,5 @@
+import MusicCornerDecor from "@/components/MusicCornerDecor";
+
 const cards = [
   {
     number: "01",
@@ -21,13 +23,14 @@ const cards = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 md:py-20 bg-transparent">
+    <section className="relative py-16 md:py-20 bg-transparent overflow-hidden">
+      <MusicCornerDecor />
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
           Why Choose Us
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {cards.map((card) => (
+                                                                            {cards.map((card) => (
             <div
               key={card.number}
               className="bg-primary rounded-2xl p-8 text-primary-foreground hover:-translate-y-2 transition-transform duration-300 group"
@@ -37,9 +40,7 @@ const WhyChooseUs = () => {
                 <span className="text-4xl font-bold opacity-30">{card.number}</span>
               </div>
               <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-              <p className="text-primary-foreground/80 text-sm leading-relaxed">
-                {card.description}
-              </p>
+              <p className="text-primary-foreground/80 text-sm leading-relaxed">{card.description}</p>
             </div>
           ))}
         </div>

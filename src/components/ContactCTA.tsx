@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const ContactCTA = () => {
   return (
-    <section id="contact" className="py-12">
+    <section id="contact" className="section-corners py-12">
       <div className="container mx-auto px-4">
         <div className="bg-primary rounded-3xl px-8 md:px-16 py-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground text-center md:text-left">

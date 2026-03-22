@@ -84,15 +84,8 @@
   body {
     @apply text-foreground font-poppins;
     position: relative;
-
-    background-color: hsl(var(--background));
-    background-image:
-      radial-gradient(900px circle at 85% 92%, hsl(var(--app-glow) / 0.35), transparent 55%),
-      radial-gradient(700px circle at 10% 15%, hsl(var(--app-glow) / 0.12), transparent 60%),
-      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f3f1ee;
+    background-image: none;
   }
 
   html {
@@ -102,7 +95,7 @@
 
 /* Subtle fixed "glassy" highlight layer */
 body::before {
-  content: "";
+  content: none;
   position: fixed;
   inset: -20%;
   pointer-events: none;
@@ -123,13 +116,56 @@ body::before {
     font-family: 'Dancing Script', cursive;
   }
 
+  .section-corners {
+    position: relative;
+  }
+
+  .section-corners::before,
+  .section-corners::after {
+    content: "♫";
+    position: absolute;
+    top: 18px;
+    font-size: 20px;
+    line-height: 1;
+    color: hsl(var(--primary) / 0.52);
+    pointer-events: none;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(84, 69, 111, 0.15);
+  }
+
+  .section-corners::before {
+    left: 16px;
+  }
+
+  .section-corners::after {
+    right: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .section-corners::before,
+    .section-corners::after {
+      top: 12px;
+      font-size: 16px;
+    }
+
+    .section-corners::before {
+      left: 10px;
+    }
+
+    .section-corners::after {
+      right: 10px;
+    }
+  }
+
   .glass-header {
     background:
-      radial-gradient(600px circle at 85% 0%, hsl(var(--app-glow) / 0.18), transparent 60%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55));
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid hsl(var(--border) / 0.5);
+      radial-gradient(680px circle at 12% 30%, hsl(var(--app-glow) / 0.1), transparent 62%),
+      radial-gradient(700px circle at 88% 15%, hsl(var(--app-glow) / 0.18), transparent 58%),
+      linear-gradient(180deg, rgba(243, 241, 238, 0.9), rgba(243, 241, 238, 0.78));
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+    box-shadow: 0 6px 18px rgba(26, 18, 46, 0.06);
   }
 }
 
@@ -145,4 +181,20 @@ body::before {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes glass-card-float-flip {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotateX(6deg);
+  }
+}
+
+.about-experience-card {
+  transform-origin: center;
+  transform-style: preserve-3d;
+  animation: glass-card-float-flip 3s ease-in-out infinite;
+  will-change: transform;
 }

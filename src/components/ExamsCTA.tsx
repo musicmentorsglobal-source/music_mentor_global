@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const ExamsCTA = () => {
   return (
-    <section className="py-12 md:py-16">
+    <section className="section-corners py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="bg-primary rounded-3xl px-8 md:px-16 py-12 md:py-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
