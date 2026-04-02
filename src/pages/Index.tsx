@@ -5,8 +5,6 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import CoursesSection from "@/components/CoursesSection";
 import ContactDetailsSection from "@/components/ContactDetailsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import GallerySection from "@/components/GallerySection";
-import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,9 +16,7 @@ const Index = () => {
       <WhyChooseUs />
       <CoursesSection />
       <TestimonialsSection />
-      <GallerySection />
       {/* <ExamsCTA /> */}
-      <BlogSection />
       <ContactDetailsSection />
       <Footer />
     </div>

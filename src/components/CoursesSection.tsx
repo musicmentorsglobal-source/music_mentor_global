@@ -3,13 +3,13 @@ import useEmblaCarousel from "embla-carousel-react";
 import MusicCornerDecor from "@/components/MusicCornerDecor";
 
 const courses = [
-  { name: "PIANO", image: "/images/piano.png" },
-  { name: "KEYBOARD", image: "/images/keyboard.png" },
-  { name: "PLECTRUM GUITAR", image: "/images/guitar.png" },
-  { name: "CLASSIC GUITAR", image: "/images/classic-guitar.png" },
-  { name: "VIOLIN", image: "/images/violin.png" },
-  { name: "DRUMS", image: "/images/drums.png" },
-  { name: "THEORY OF MUSIC", image: "/images/music-theory.png" },
+  { name: "Online Guitar Classes", image: "/images/guitar.png" },
+  { name: "Online Piano Classes", image: "/images/piano.png" },
+  { name: "Live Music Webinars", image: "/images/keyboard.png" },
+  { name: "Music Consultancy for Schools and Colleges", image: "/images/violin.png" },
+  { name: "Music Composition Services", image: "/images/music-theory.png" },
+  { name: "Trinity Exam Certification Support", image: "/images/classic-guitar.png" },
+  { name: "Collaborative Online Jam Sessions", image: "/images/drums.png" },
 ];
 
 const CoursesSection = () => {
@@ -42,21 +42,21 @@ const CoursesSection = () => {
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-14" data-aos="fade-up">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-10 h-[2px] bg-primary" />
             <span className="font-script text-primary text-xl">
-              Master Your Instrument at Tune In School Of Music
+              Explore Courses at Music Mentor Global
             </span>
             <span className="w-10 h-[2px] bg-primary" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#54456f]">
-            Instrument Teaching Courses
+            Our Online Music Programs
           </h2>
         </div>
 
         {/* Swipe Carousel - No Arrows / No Dots / Manual Only */}
-        <div className="max-w-6xl mx-auto overflow-hidden cursor-grab active:cursor-grabbing select-none" ref={emblaRef}>
+        <div className="max-w-6xl mx-auto overflow-hidden cursor-grab active:cursor-grabbing select-none" ref={emblaRef} data-aos="fade-up">
           <div className="flex -ml-6">
             {courses.map((course, index) => {
               const total = courses.length;
@@ -73,6 +73,8 @@ const CoursesSection = () => {
                 <div
                   key={course.name}
                   className="min-w-0 flex-[0_0_90%] sm:flex-[0_0_72%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-6"
+                  data-aos={index % 2 === 0 ? "fade-up-right" : "fade-down-right"}
+                  data-aos-delay={index * 90}
                 >
                   <article className="relative text-center">
                     <img
@@ -90,7 +92,7 @@ const CoursesSection = () => {
                       draggable={false}
                     />
                     <h3
-                      className={`text-center text-[#54456f] font-bold text-sm md:text-base mt-4 uppercase tracking-wide transition-opacity duration-500 ${
+                      className={`text-center text-[#54456f] font-bold text-sm md:text-base mt-4 transition-opacity duration-500 ${
                         isActive ? "opacity-100" : isAdjacent ? "opacity-80" : "opacity-0"
                       }`}
                     >

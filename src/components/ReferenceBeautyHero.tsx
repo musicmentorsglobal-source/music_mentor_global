@@ -49,28 +49,28 @@ const ReferenceBeautyHero = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-viewport" ref={emblaRef}>
         <div className="hero-track">
           {slides.map((slide, index) => (
             <article key={index} className="hero-slide">
-              <div className="hero-left">
+              <div className="hero-left" data-aos="fade-right" data-aos-delay="100">
                 <img src={slide.image} alt="musician" />
               </div>
 
-              <div className="hero-right">
-                <div className="hero-subtitle-row">
+              <div className="hero-right" data-aos="fade-left" data-aos-delay="180">
+                <div className="hero-subtitle-row" data-aos="fade-up" data-aos-delay="220">
                   <span className="font-script hero-subtitle">{slide.subtitle}</span>
                   <span className="hero-subtitle-line" />
                 </div>
 
-                <h1>
+                <h1 data-aos="fade-up" data-aos-delay="260">
                   {slide.title} <span className="hero-highlight">{slide.highlight}</span>
                 </h1>
 
-                <p>{slide.description}</p>
+                <p data-aos="fade-up-right" data-aos-delay="320">{slide.description}</p>
 
-                <button className="cta-btn" type="button">
+                <button className="cta-btn" type="button" data-aos="fade-up" data-aos-delay="380">
                   Read More
                 </button>
               </div>

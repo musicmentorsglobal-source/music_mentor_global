@@ -55,17 +55,22 @@ const TestimonialsSection = () => {
     <section className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="font-script text-primary text-2xl">Testimonials</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3">
+        <div className="text-center mb-12" data-aos="fade-up">
+          <span className="font-script text-primary text-2xl" data-aos="fade-up">Testimonials</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3" data-aos="fade-up" data-aos-delay="120">
             What's on our students' minds?
           </h2>
         </div>
 
-        <div className="overflow-hidden" ref={emblaRef}>
+        <div className="overflow-hidden" ref={emblaRef} data-aos="fade-up">
           <div className="flex -ml-6">
             {testimonials.map((t, index) => (
-              <div key={index} className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-6">
+              <div
+                key={index}
+                className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-6"
+                data-aos={index % 2 === 0 ? "fade-up-right" : "fade-down-right"}
+                data-aos-delay={index * 100}
+              >
                 <div className="relative h-full overflow-hidden rounded-2xl border border-[#e5dfda] bg-white/90 p-8 shadow-[0_12px_28px_rgba(84,69,111,0.10)]">
                   <div className="pointer-events-none absolute inset-[1px] rounded-2xl border border-white/60" />
                   <div className="flex items-center gap-4 mb-4">

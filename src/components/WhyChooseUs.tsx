@@ -26,14 +26,16 @@ const WhyChooseUs = () => {
     <section className="relative py-16 md:py-20 bg-transparent overflow-hidden">
       <MusicCornerDecor />
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12" data-aos="fade-up">
           Why Choose Us
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-                                                                            {cards.map((card) => (
+          {cards.map((card, index) => (
             <div
               key={card.number}
               className="bg-primary rounded-2xl p-8 text-primary-foreground hover:-translate-y-2 transition-transform duration-300 group"
+              data-aos={index % 2 === 0 ? "fade-up-right" : "fade-up"}
+              data-aos-delay={index * 120}
             >
               <div className="flex items-center gap-4 mb-4">
                 <img src="/images/music-icon.svg" alt="" className="w-10 h-10 brightness-0 invert" />
