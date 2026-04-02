@@ -4,7 +4,7 @@ import {
   getMissingEnvVars,
   sendContactEmail,
   validatePayload,
-} from "./contact-mail.mjs";
+} from "./contact-mail.js";
 
 dotenv.config();
 
