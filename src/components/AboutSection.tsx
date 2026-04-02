@@ -24,7 +24,7 @@ const AboutSection = () => {
                     "linear-gradient(90deg, rgba(255,255,255,0.72) 0%, rgba(227,220,226,0.72) 50%, rgba(255,255,255,0.72) 100%)",
                 }}
               >
-                <span className="block text-xl md:text-2xl font-bold text-[#54456f] leading-none">100+</span>
+                <span className="block text-xl md:text-2xl font-bold text-[#54456f] leading-none">50+</span>
                 <span className="block text-[10px] md:text-xs font-semibold text-[#6b5f7d] mt-1.5 uppercase tracking-wider">
                   Students
                 </span>
@@ -66,7 +66,7 @@ const AboutSection = () => {
                     "linear-gradient(90deg, rgba(255,255,255,0.72) 0%, rgba(227,220,226,0.72) 50%, rgba(255,255,255,0.72) 100%)",
                 }}
               >
-                <span className="block text-2xl md:text-3xl font-bold text-[#54456f] leading-none">1+</span>
+                <span className="block text-2xl md:text-3xl font-bold text-[#54456f] leading-none">15+</span>
                 <span className="block text-xs md:text-sm font-semibold text-[#6b5f7d] mt-2 uppercase tracking-wider">
                   Experience
                 </span>
