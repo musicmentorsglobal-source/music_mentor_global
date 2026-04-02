@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -20,6 +20,30 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="hidden border-b border-[#eadfd6] bg-[radial-gradient(540px_circle_at_15%_30%,rgba(240,90,40,0.12),transparent_58%),radial-gradient(620px_circle_at_85%_20%,rgba(240,90,40,0.12),transparent_58%),linear-gradient(180deg,rgba(255,249,245,0.94),rgba(248,241,235,0.92))] text-[#54456f] backdrop-blur-xl lg:block">
+        <div className="container mx-auto flex items-center gap-8 px-4">
+          <div className="flex items-center gap-3 py-3">
+            <Phone className="h-4 w-4 text-primary" />
+            <a href="tel:+917200636000" className="text-[15px] text-[#54456f] transition-colors hover:text-primary">
+              +91 7200636000
+            </a>
+          </div>
+          <div className="flex items-center gap-3 py-3">
+            <Mail className="h-4 w-4 text-primary" />
+            <a
+              href="mailto:tuneinmusicschool@gmail.com"
+              className="text-[15px] text-[#54456f] transition-colors hover:text-primary"
+            >
+              tuneinmusicschool@gmail.com
+            </a>
+          </div>
+          <div className="flex items-center gap-3 py-3">
+            <MapPin className="h-4 w-4 text-primary" />
+            <span className="text-[15px] text-[#54456f]">Avadi, Chennai, Tamil Nadu.</span>
+          </div>
+        </div>
+      </div>
+
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 glass-header ${
           isScrolled ? "shadow-lg" : "shadow-sm"
