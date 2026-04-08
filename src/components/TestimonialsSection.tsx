@@ -5,27 +5,33 @@ import MusicCornerDecor from "@/components/MusicCornerDecor";
 
 const testimonials = [
   {
-    text: "The masters take up individual classes for piano, keyboard, drum, guitar violin and theory of music. I am learning since 5 years and have been supported well to take graded exams.",
-    name: "Thanik",
-    role: "Student",
-    heading: "Good teaching",
-  },
-  {
-    text: "It's a nice place to study music.. music master Praveen is so simple and approachable. It's very budget friendly too. You can trust this music school",
-    name: "Jude Albert",
-    role: "Student",
+    text: "I definitely recommend Gokul as a piano teacher. His understanding of my learning capability really stood out. The classes were designed specifically for me, which made the entire process comfortable and effective. Even as an adult learner, I felt confident and motivated in every session.",
+    name: "Mrs. Amutha Pal",
+    role: "Piano Student",
     heading: "",
   },
   {
-    text: "The masters take up individual classes for piano, keyboard, drum, guitar violin and theory of music. I am learning since 5 years and have been supported well to take graded exams.",
-    name: "Thanik",
-    role: "Student",
-    heading: "Good teaching",
+    text: "I successfully completed my Trinity Grade exam with distinction under Gokul's guidance. Everything was taught online, but the method was so simple and structured that learning never felt difficult. He breaks down concepts in a very practical way, which really helped me improve quickly.",
+    name: "Prahan",
+    role: "Acoustic Guitar Student",
+    heading: "",
   },
   {
-    text: "It's a nice place to study music.. music master Praveen is so simple and approachable. It's very budget friendly too. You can trust this music school",
-    name: "Jude Albert",
-    role: "Student",
+    text: "Gokul makes learning piano very easy to follow, even for beginners. His teaching style is clear and patient, and he focuses on building strong fundamentals. Within a few months, I was able to play confidently and understand music better than I expected.",
+    name: "Rithika S",
+    role: "Piano Student",
+    heading: "Beginner to Intermediate",
+  },
+  {
+    text: "Classes were very easy to follow and well structured. I could see clear improvement within a few weeks, which kept me motivated.",
+    name: "Kavya R",
+    role: "Piano Student",
+    heading: "",
+  },
+  {
+    text: "Learning online was surprisingly smooth. The teaching method is simple and practical, and I was able to play songs much faster than I expected.",
+    name: "Arjun K",
+    role: "Acoustic Guitar Student",
     heading: "",
   },
 ];

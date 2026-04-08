@@ -6,6 +6,7 @@ import CoursesSection from "@/components/CoursesSection";
 import ContactDetailsSection from "@/components/ContactDetailsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       {/* <ExamsCTA /> */}
       <ContactDetailsSection />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
