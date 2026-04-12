@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { Mail, Menu, Phone, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -24,22 +24,18 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center gap-8 px-4">
           <div className="flex items-center gap-3 py-3">
             <Phone className="h-4 w-4 text-primary" />
-            <a href="tel:+917200636000" className="text-[15px] text-[#54456f] transition-colors hover:text-primary">
-              +91 7200636000
+            <a href="tel:+918148865188" className="text-[15px] text-[#54456f] transition-colors hover:text-primary">
+              +91 8148865188
             </a>
           </div>
           <div className="flex items-center gap-3 py-3">
             <Mail className="h-4 w-4 text-primary" />
             <a
-              href="mailto:tuneinmusicschool@gmail.com"
+              href="mailto:musicmentorsglobal@gmail.com"
               className="text-[15px] text-[#54456f] transition-colors hover:text-primary"
             >
-              tuneinmusicschool@gmail.com
+              musicmentorsglobal@gmail.com
             </a>
-          </div>
-          <div className="flex items-center gap-3 py-3">
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="text-[15px] text-[#54456f]">Avadi, Chennai, Tamil Nadu.</span>
           </div>
         </div>
       </div>
@@ -51,7 +47,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="#hero">
-            <img src="/images/logo.png" alt="Tune In School of Music" className="h-14 md:h-16" />
+            <img src="/images/logo.png" alt="Music Mendor Global" className="h-14 md:h-16" />
           </a>
 
           {/* Desktop Nav */}

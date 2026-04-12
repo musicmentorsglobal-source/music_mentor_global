@@ -11,7 +11,7 @@ const ContactCTA = () => {
               we're here to help you start your musical journey!
             </span>
           </h3>
-          <a href="tel:+917200636000">
+          <a href="tel:+918148865188">
             <Button className="bg-primary-foreground text-primary rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wider hover:bg-primary-foreground/90 whitespace-nowrap">
               Contact Us
             </Button>

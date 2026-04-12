@@ -81,12 +81,80 @@
     @apply border-border;
   }
 
-  body {
-    @apply text-foreground font-poppins;
-    position: relative;
-    background-color: #f3f1ee;
-    background-image: none;
+body {
+  @apply text-foreground font-poppins;
+  position: relative;
+  background-color: #f3f1ee;
+  background-image: none;
+}
+
+.app-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(500px circle at 20% 20%, rgba(240, 90, 40, 0.12), transparent 60%),
+    radial-gradient(520px circle at 80% 30%, rgba(240, 90, 40, 0.12), transparent 62%),
+    linear-gradient(180deg, rgba(255, 249, 245, 0.98), rgba(248, 241, 235, 0.96));
+  backdrop-filter: blur(6px);
+}
+
+.app-loader__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.app-loader__logo {
+  width: clamp(84px, 18vw, 120px);
+  height: clamp(84px, 18vw, 120px);
+  object-fit: contain;
+  animation: loader-float 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 14px 30px rgba(240, 90, 40, 0.28));
+}
+
+@keyframes loader-float {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.app-loader__pads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 16px);
+}
+
+.app-loader__pads span {
+  width: clamp(10px, 2vw, 14px);
+  height: clamp(36px, 9vw, 54px);
+  border-radius: 999px;
+  border: 2px solid hsl(var(--primary));
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(240, 90, 40, 0.2);
+  animation: loader-pad-cycle 4s linear infinite;
+}
+
+.app-loader__pads span:nth-child(1) { animation-delay: 0s; }
+.app-loader__pads span:nth-child(2) { animation-delay: 1s; }
+.app-loader__pads span:nth-child(3) { animation-delay: 2s; }
+.app-loader__pads span:nth-child(4) { animation-delay: 3s; }
+
+@keyframes loader-pad-cycle {
+  0% { background: hsl(var(--primary)); }
+  24% { background: hsl(var(--primary)); }
+  25% { background: transparent; }
+  100% { background: transparent; }
+}
 
   html {
     scroll-behavior: smooth;

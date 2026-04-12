@@ -11,7 +11,7 @@ const ExamsCTA = () => {
           <p className="text-primary-foreground/85 max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed">
             Prepare for ABRSM and Trinity College London music exams from Initial to Grade 8. Our structured curriculum ensures that students excel in both performance and theory, gaining international recognition and enhancing their musical careers.
           </p>
-          <a href="tel:+917200636000">
+          <a href="tel:+918148865188">
             <Button className="bg-primary-foreground text-primary rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wider hover:bg-primary-foreground/90">
               Contact Us
             </Button>

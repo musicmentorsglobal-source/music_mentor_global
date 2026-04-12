@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
               <div
                 key={index}
                 className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-6"
-                data-aos={index % 2 === 0 ? "fade-up-right" : "fade-down-right"}
+                data-aos="fade-down"
                 data-aos-delay={index * 100}
               >
                 <div className="relative h-full overflow-hidden rounded-2xl border border-[#e5dfda] bg-white/90 p-8 shadow-[0_12px_28px_rgba(84,69,111,0.10)]">

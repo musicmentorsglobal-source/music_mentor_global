@@ -9,7 +9,7 @@ const slides = [
     title: "Education In Harmony With",
     highlight: "Music",
     description:
-      "Join Tune In School Of Music And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
+      "Join Music Mendor Global And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
     image: "/img/img1.png",
   },
   {
@@ -17,7 +17,7 @@ const slides = [
     title: "Master the Art of Music With",
     highlight: "Us",
     description:
-      "Tune In School of Music offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
+      "Music Mendor Global offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
     image: "/img/img11.png",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     title: "Teaching Tunes, Creating",
     highlight: "Stars",
     description:
-      "At Tune In School of Music, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
+      "At Music Mendor Global, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
     image: "/img/img6.png",
   },
 ];

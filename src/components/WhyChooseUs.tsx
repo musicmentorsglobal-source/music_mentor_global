@@ -5,7 +5,7 @@ const cards = [
     number: "01",
     title: "Expert Faculty",
     description:
-      "At Tune In School Of Music, our highly experienced and certified instructors provide personalized coaching, ensuring that each student receives the guidance they need to excel in their musical journey.",
+      "At Music Mendor Global, our highly experienced and certified instructors provide personalized coaching, ensuring that each student receives the guidance they need to excel in their musical journey.",
   },
   {
     number: "02",
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
             <div
               key={card.number}
               className="bg-primary rounded-2xl p-8 text-primary-foreground hover:-translate-y-2 transition-transform duration-300 group"
-              data-aos={index % 2 === 0 ? "fade-up-right" : "fade-up"}
+              data-aos="fade-down"
               data-aos-delay={index * 120}
             >
               <div className="flex items-center gap-4 mb-4">
