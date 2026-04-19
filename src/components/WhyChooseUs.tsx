@@ -26,23 +26,23 @@ const WhyChooseUs = () => {
     <section className="relative py-16 md:py-20 bg-transparent overflow-hidden">
       <MusicCornerDecor />
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12" data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#54456f] mb-12" data-aos="fade-up">
           Why Choose Us
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <div
               key={card.number}
-              className="bg-primary rounded-2xl p-8 text-primary-foreground hover:-translate-y-2 transition-transform duration-300 group"
+              className="gradient-outline-card rounded-2xl p-8 text-[#54456f] hover:-translate-y-2 transition-transform duration-300 group"
               data-aos="fade-down"
               data-aos-delay={index * 120}
             >
               <div className="flex items-center gap-4 mb-4">
-                <img src="/images/music-icon.svg" alt="" className="w-10 h-10 brightness-0 invert" />
-                <span className="text-4xl font-bold opacity-30">{card.number}</span>
+                <span className="music-gradient text-4xl leading-none">♫</span>
+                <span className="music-gradient text-4xl font-bold opacity-60">{card.number}</span>
               </div>
               <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-              <p className="text-primary-foreground/80 text-sm leading-relaxed">{card.description}</p>
+              <p className="text-[#6b5f7d] text-sm leading-relaxed">{card.description}</p>
             </div>
           ))}
         </div>

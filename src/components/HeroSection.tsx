@@ -69,11 +69,11 @@ const HeroSection = () => {
               <div className="relative z-10 container mx-auto px-4 h-full flex items-center min-h-[600px] md:min-h-[700px] lg:min-h-[800px]">
                 <div className="max-w-2xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="font-script text-primary text-2xl md:text-3xl italic">{slide.subtitle}</span>
+                    <span className="music-gradient font-script text-2xl md:text-3xl italic">{slide.subtitle}</span>
                     <span className="w-16 h-[2px] bg-primary-foreground/50 inline-block" />
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-                    {slide.title} <span className="text-primary">{slide.highlight}</span>
+                    {slide.title} <span className="music-gradient">{slide.highlight}</span>
                   </h1>
                   <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
                     {slide.description}

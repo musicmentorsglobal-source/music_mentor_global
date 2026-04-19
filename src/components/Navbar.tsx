@@ -11,6 +11,7 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState("#hero");
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -18,18 +19,51 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const sectionIds = navLinks.map((link) => link.href.replace("#", ""));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleEntries.length > 0) {
+          setActiveHash(`#${visibleEntries[0].target.id}`);
+        }
+      },
+      {
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: [0.2, 0.35, 0.5, 0.65],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <div className="hidden border-b border-[#eadfd6] bg-[radial-gradient(540px_circle_at_15%_30%,rgba(240,90,40,0.12),transparent_58%),radial-gradient(620px_circle_at_85%_20%,rgba(240,90,40,0.12),transparent_58%),linear-gradient(180deg,rgba(255,249,245,0.94),rgba(248,241,235,0.92))] text-[#54456f] backdrop-blur-xl lg:block">
+      <div className="glass-header hidden border-b border-white/40 text-[#54456f] lg:block">
         <div className="container mx-auto flex items-center gap-8 px-4">
           <div className="flex items-center gap-3 py-3">
-            <Phone className="h-4 w-4 text-primary" />
+            <span className="top-contact-icon">
+              <Phone />
+            </span>
             <a href="tel:+918148865188" className="text-[15px] text-[#54456f] transition-colors hover:text-primary">
               +91 8148865188
             </a>
           </div>
           <div className="flex items-center gap-3 py-3">
-            <Mail className="h-4 w-4 text-primary" />
+            <span className="top-contact-icon">
+              <Mail />
+            </span>
             <a
               href="mailto:musicmentorsglobal@gmail.com"
               className="text-[15px] text-[#54456f] transition-colors hover:text-primary"
@@ -47,7 +81,9 @@ const Navbar = () => {
       >
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="#hero">
-            <img src="/images/logo.png" alt="Music Mendor Global" className="h-14 md:h-16" />
+            <div className="brand-wordmark">
+              <span className="brand-wordmark__title music-gradient text-[2rem] md:text-[2.35rem]">Music Mendor Global</span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
@@ -56,7 +92,10 @@ const Navbar = () => {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-foreground font-medium text-[15px] uppercase tracking-wide hover:text-primary transition-colors"
+                  className={`nav-link font-medium text-[15px] uppercase tracking-wide ${
+                    activeHash === link.href ? "is-active" : ""
+                  }`}
+                  onClick={() => setActiveHash(link.href)}
                 >
                   {link.label}
                 </a>
@@ -68,14 +107,14 @@ const Navbar = () => {
             <a
               href="#"
               aria-label="Instagram"
-              className="w-10 h-10 rounded-full border border-primary/30 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="gradient-icon-button flex h-10 w-10 items-center justify-center rounded-full"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
             </a>
             <a
               href="#"
               aria-label="Twitter"
-              className="w-10 h-10 rounded-full border border-primary/30 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="gradient-icon-button flex h-10 w-10 items-center justify-center rounded-full"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.25L6.7 22H3.6l7.25-8.29L1 2h6.25l4.32 5.7L18.9 2zm-1.07 18h1.69L6.33 3.9H4.5L17.83 20z"/></svg>
             </a>
@@ -95,8 +134,13 @@ const Navbar = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="block text-foreground font-medium text-[15px] uppercase tracking-wide hover:text-primary transition-colors py-2"
-                    onClick={() => setMobileOpen(false)}
+                    className={`nav-link block py-2 font-medium text-[15px] uppercase tracking-wide ${
+                      activeHash === link.href ? "is-active" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveHash(link.href);
+                      setMobileOpen(false);
+                    }}
                   >
                     {link.label}
                   </a>
@@ -107,14 +151,14 @@ const Navbar = () => {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-full border border-primary/30 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="gradient-icon-button flex h-10 w-10 items-center justify-center rounded-full"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
               </a>
               <a
                 href="#"
                 aria-label="Twitter"
-                className="w-10 h-10 rounded-full border border-primary/30 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="gradient-icon-button flex h-10 w-10 items-center justify-center rounded-full"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.25L6.7 22H3.6l7.25-8.29L1 2h6.25l4.32 5.7L18.9 2zm-1.07 18h1.69L6.33 3.9H4.5L17.83 20z"/></svg>
               </a>

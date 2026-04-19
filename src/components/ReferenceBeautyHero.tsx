@@ -70,8 +70,8 @@ const ReferenceBeautyHero = () => {
 
                 <p data-aos="fade-up-right" data-aos-delay="320">{slide.description}</p>
 
-                <button className="cta-btn" type="button" data-aos="fade-up" data-aos-delay="380">
-                  Read More
+                <button className="cta-btn gradient-outline-button" type="button" data-aos="fade-up" data-aos-delay="380">
+                  <span className="music-gradient">Read More</span>
                 </button>
               </div>
             </article>
@@ -85,7 +85,7 @@ const ReferenceBeautyHero = () => {
             key={index}
             type="button"
             onClick={() => emblaApi?.scrollTo(index)}
-            className={`hero-dot ${index === selectedIndex ? "is-active" : ""}`}
+            className={`hero-dot gradient-carousel-dot ${index === selectedIndex ? "is-active" : ""}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

@@ -5,6 +5,7 @@ import MusicCornerDecor from "@/components/MusicCornerDecor";
 const courses = [
   { name: "Online Guitar Classes", image: "/images/guitar.png" },
   { name: "Online Piano Classes", image: "/images/piano.png" },
+  { name: "Online Vocal Classes", image: "/images/vocal_class.jpeg" },
   { name: "Live Music Webinars", image: "/images/keyboard.png" },
   { name: "Music Consultancy for Schools and Colleges", image: "/images/violin.png" },
   { name: "Music Composition Services", image: "/images/music-theory.png" },
@@ -38,17 +39,17 @@ const CoursesSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="courses" className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
+    <section id="courses" className="app-surface relative overflow-hidden py-16 md:py-24">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14" data-aos="fade-up">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-10 h-[2px] bg-primary" />
-            <span className="font-script text-primary text-xl">
+            <span className="brand-gradient-bar w-10 h-[2px]" />
+            <span className="brand-gradient-text font-script text-xl">
               Explore Courses at Music Mentor Global
             </span>
-            <span className="w-10 h-[2px] bg-primary" />
+            <span className="brand-gradient-bar w-10 h-[2px]" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#54456f]">
             Our Online Music Programs

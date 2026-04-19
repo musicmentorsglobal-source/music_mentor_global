@@ -116,7 +116,7 @@ const ContactDetailsSection = () => {
 
   return (
     <>
-      <section id="contact" className="relative py-16 md:py-24 bg-[#f3f1ee] overflow-hidden">
+      <section id="contact" className="app-surface relative overflow-hidden py-16 md:py-24">
         <MusicCornerDecor />
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto rounded-3xl border border-white/80 bg-white/85 backdrop-blur-sm shadow-[0_20px_36px_rgba(84,69,111,0.12)] p-6 md:p-10">
@@ -193,9 +193,9 @@ const ContactDetailsSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-primary text-primary-foreground rounded-full px-10 py-6 text-sm md:text-base font-semibold uppercase tracking-wider hover:bg-primary/90 disabled:opacity-70"
+                  className="gradient-outline-button rounded-full px-10 py-6 text-sm md:text-base font-semibold uppercase tracking-wider disabled:opacity-70"
                 >
-                  {isSubmitting ? "Sending..." : "Subscribe"}
+                  <span className="music-gradient">{isSubmitting ? "Sending..." : "Subscribe"}</span>
                 </Button>
               </div>
 

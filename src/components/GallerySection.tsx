@@ -30,11 +30,11 @@ const GallerySection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="gallery" className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
+    <section id="gallery" className="app-surface relative overflow-hidden py-16 md:py-24">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="font-script text-primary text-2xl">Gallery</span>
+          <span className="brand-gradient-text font-script text-2xl">Gallery</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3">
             Our Music School Gallery
           </h2>

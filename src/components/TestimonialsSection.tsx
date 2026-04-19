@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { User } from "lucide-react";
 import MusicCornerDecor from "@/components/MusicCornerDecor";
 
 const testimonials = [
@@ -58,17 +59,17 @@ const TestimonialsSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
+    <section className="app-surface relative overflow-hidden py-16 md:py-24">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-12" data-aos="fade-up">
-          <span className="font-script text-primary text-2xl" data-aos="fade-up">Testimonials</span>
+          <span className="brand-gradient-text font-script text-2xl" data-aos="fade-up">Testimonials</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3" data-aos="fade-up" data-aos-delay="120">
             What's on our students' minds?
           </h2>
         </div>
 
-        <div className="overflow-hidden" ref={emblaRef} data-aos="fade-up">
+        <div className="overflow-hidden px-1" ref={emblaRef} data-aos="fade-up">
           <div className="flex -ml-6">
             {testimonials.map((t, index) => (
               <div
@@ -77,10 +78,14 @@ const TestimonialsSection = () => {
                 data-aos="fade-down"
                 data-aos-delay={index * 100}
               >
-                <div className="relative h-full overflow-hidden rounded-2xl border border-[#e5dfda] bg-white/90 p-8 shadow-[0_12px_28px_rgba(84,69,111,0.10)]">
+                <div className="gradient-outline-card relative h-full overflow-hidden rounded-2xl p-8">
                   <div className="pointer-events-none absolute inset-[1px] rounded-2xl border border-white/60" />
                   <div className="flex items-center gap-4 mb-4">
-                    <img src="/images/user.svg" alt={t.name} className="w-14 h-14" />
+                    <div className="gradient-avatar-ring">
+                      <span>
+                        <User className="h-7 w-7" strokeWidth={2.2} />
+                      </span>
+                    </div>
                     <div>
                       <h4 className="font-bold text-[#54456f]">{t.name}</h4>
                       <p className="text-[#6b5f7d] text-sm">{t.role}</p>
@@ -107,8 +112,8 @@ const TestimonialsSection = () => {
             <button
               key={index}
               onClick={() => emblaApi?.scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                selectedIndex === index ? "bg-primary w-8" : "bg-primary/30"
+              className={`gradient-carousel-dot h-3 rounded-full transition-all ${
+                selectedIndex === index ? "is-active w-8" : "w-3"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />

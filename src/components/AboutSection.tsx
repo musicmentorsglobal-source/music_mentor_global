@@ -3,7 +3,7 @@ import MusicCornerDecor from "@/components/MusicCornerDecor";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative py-8 md:py-12 bg-[#f3f1ee] overflow-hidden">
+    <section id="about" className="app-surface relative overflow-hidden py-8 md:py-12 scroll-mt-36">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-10 items-center">
@@ -76,7 +76,7 @@ const AboutSection = () => {
 
           {/* Right - Content */}
           <div data-aos="fade-left" data-aos-delay="140">
-            <span className="font-script text-primary text-2xl md:text-3xl" data-aos="fade-up">
+            <span className="brand-gradient-text font-script text-2xl md:text-3xl" data-aos="fade-up">
               About Music Mentor Global
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#54456f] leading-tight mt-3 mb-6" data-aos="fade-left" data-aos-delay="120">
@@ -88,8 +88,8 @@ const AboutSection = () => {
             <p className="text-[#6b5f7d] text-base md:text-lg mb-8 leading-relaxed" data-aos="fade-left" data-aos-delay="240">
               Our structured, personalized syllabus builds a strong foundation, clarity, and confidence in every student. This approach not only improves learning outcomes but also increases long-term engagement and retention.
             </p>
-            <Button className="bg-primary text-primary-foreground rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wider hover:bg-primary/90" data-aos="fade-up" data-aos-delay="300">
-              Read More
+            <Button className="gradient-outline-button rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wider" data-aos="fade-up" data-aos-delay="300">
+              <span className="music-gradient">Read More</span>
             </Button>
           </div>
         </div>

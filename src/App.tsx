@@ -84,7 +84,9 @@ const App = () => {
       {isLoading && (
         <div className="app-loader" role="status" aria-live="polite">
           <div className="app-loader__inner">
-            <img src="/images/logo.png" alt="Music Mendor Global" className="app-loader__logo" />
+            <div className="app-loader__logo brand-wordmark brand-wordmark--center">
+              <span className="brand-wordmark__title music-gradient">Music Mendor Global</span>
+            </div>
             <div className="app-loader__pads" aria-hidden="true">
               <span />
               <span />

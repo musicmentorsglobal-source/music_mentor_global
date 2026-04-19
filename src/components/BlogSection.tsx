@@ -52,11 +52,11 @@ const BlogSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="blog" className="relative overflow-hidden py-16 md:py-24 bg-[#f3f1ee]">
+    <section id="blog" className="app-surface relative overflow-hidden py-16 md:py-24">
       <MusicCornerDecor />
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="font-script text-primary text-2xl">Blog & News</span>
+          <span className="brand-gradient-text font-script text-2xl">Blog & News</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#54456f] mt-3">
             Our Latest News & Articles
           </h2>
@@ -78,7 +78,7 @@ const BlogSection = () => {
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3 text-sm">
                       <span className="text-[#6b5f7d]">{blog.date}</span>
-                      <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-primary/10 brand-gradient-text px-3 py-1 rounded-full text-xs font-medium">
                         {blog.category}
                       </span>
                     </div>
@@ -87,7 +87,7 @@ const BlogSection = () => {
                     </h3>
                     <a
                       href="#"
-                      className="text-primary font-semibold text-sm uppercase tracking-wide hover:underline"
+                      className="brand-gradient-text font-semibold text-sm uppercase tracking-wide hover:underline"
                     >
                       Read More
                     </a>
