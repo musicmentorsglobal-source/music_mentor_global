@@ -6,6 +6,7 @@ const courses = [
   { name: "Online Guitar Classes", image: "/images/guitar.png" },
   { name: "Online Piano Classes", image: "/images/piano.png" },
   { name: "Online Vocal Classes", image: "/images/vocal_class.jpeg" },
+  { name: "Hindustani Vocal Tutoring", image: "/img/Hindustani_Vocal.jpeg" },
   { name: "Live Music Webinars", image: "/images/keyboard.png" },
   { name: "Music Consultancy for Schools and Colleges", image: "/images/violin.png" },
   { name: "Music Composition Services", image: "/images/music-theory.png" },
@@ -47,7 +48,7 @@ const CoursesSection = () => {
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="brand-gradient-bar w-10 h-[2px]" />
             <span className="brand-gradient-text font-script text-xl">
-              Explore Courses at Music Mentor Global
+              Explore Courses at Music Mentors Global
             </span>
             <span className="brand-gradient-bar w-10 h-[2px]" />
           </div>
@@ -85,9 +86,9 @@ const CoursesSection = () => {
                         isActive
                           ? "opacity-100 blur-0 scale-100 shadow-[0_16px_34px_rgba(84,69,111,0.22)]"
                           : isLeft
-                          ? "opacity-58 blur-[14px] brightness-90 saturate-75 shadow-[0_8px_20px_rgba(84,69,111,0.10)] [transform:perspective(1000px)_rotateY(12deg)_scale(0.86)]"
+                          ? "opacity-58 brightness-90 saturate-75 shadow-[0_8px_20px_rgba(84,69,111,0.10)] [transform:perspective(1000px)_rotateY(12deg)_scale(0.86)]"
                           : isRight
-                          ? "opacity-58 blur-[14px] brightness-90 saturate-75 shadow-[0_8px_20px_rgba(84,69,111,0.10)] [transform:perspective(1000px)_rotateY(-12deg)_scale(0.86)]"
+                          ? "opacity-58 brightness-90 saturate-75 shadow-[0_8px_20px_rgba(84,69,111,0.10)] [transform:perspective(1000px)_rotateY(-12deg)_scale(0.86)]"
                           : "opacity-0 scale-[0.9] blur-[10px] pointer-events-none"
                       }`}
                       draggable={false}

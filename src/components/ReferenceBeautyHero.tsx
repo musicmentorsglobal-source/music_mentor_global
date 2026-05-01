@@ -9,23 +9,23 @@ const slides = [
     title: "Education In Harmony With",
     highlight: "Music",
     description:
-      "Join Music Mendor Global And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
+      "Join Music Mentors Global And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
     image: "/img/img1.png",
   },
   {
-    subtitle: "Best Ballet Studio",
+    subtitle: "The Mentor Studio",
     title: "Master the Art of Music With",
     highlight: "Us",
     description:
-      "Music Mendor Global offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
-    image: "/img/img11.png",
+      "Music Mentors Global offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
+    image: "/img/playing_paino.png",
   },
   {
-    subtitle: "Grand Ceremony",
-    title: "Teaching Tunes, Creating",
-    highlight: "Stars",
+    subtitle: "The Path to Performance",
+    title: "Building Artists, One Note at a",
+    highlight: "Time",
     description:
-      "At Music Mendor Global, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
+      "At Music Mentors Global, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
     image: "/img/img6.png",
   },
 ];
@@ -70,9 +70,6 @@ const ReferenceBeautyHero = () => {
 
                 <p data-aos="fade-up-right" data-aos-delay="320">{slide.description}</p>
 
-                <button className="cta-btn gradient-outline-button" type="button" data-aos="fade-up" data-aos-delay="380">
-                  <span className="music-gradient">Read More</span>
-                </button>
               </div>
             </article>
           ))}

@@ -77,13 +77,13 @@ const AboutSection = () => {
           {/* Right - Content */}
           <div data-aos="fade-left" data-aos-delay="140">
             <span className="brand-gradient-text font-script text-2xl md:text-3xl" data-aos="fade-up">
-              About Music Mentor Global
+              About Music Mentors Global
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#54456f] leading-tight mt-3 mb-6" data-aos="fade-left" data-aos-delay="120">
-              Welcome to Music Mentor Global
+              Welcome to Music Mentors Global
             </h2>
             <p className="text-[#6b5f7d] text-base md:text-lg mb-4 leading-relaxed" data-aos="fade-left" data-aos-delay="180">
-              <strong className="text-[#54456f]">At Music Mentor Global</strong>, we teach music online, starting with guitar and piano. Unlike traditional platforms that rush students into exam-based learning, such as Trinity grades, we first help them understand why they are learning and what they are learning.
+              <strong className="text-[#54456f]">At Music Mentors Global</strong>, we teach music online, starting with guitar and piano. Unlike traditional platforms that rush students into exam-based learning, such as Trinity grades, we first help them understand why they are learning and what they are learning.
             </p>
             <p className="text-[#6b5f7d] text-base md:text-lg mb-8 leading-relaxed" data-aos="fade-left" data-aos-delay="240">
               Our structured, personalized syllabus builds a strong foundation, clarity, and confidence in every student. This approach not only improves learning outcomes but also increases long-term engagement and retention.

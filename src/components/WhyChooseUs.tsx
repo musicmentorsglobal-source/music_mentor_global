@@ -5,7 +5,7 @@ const cards = [
     number: "01",
     title: "Expert Faculty",
     description:
-      "At Music Mendor Global, our highly experienced and certified instructors provide personalized coaching, ensuring that each student receives the guidance they need to excel in their musical journey.",
+      "At Music Mentors Global, our highly experienced and certified instructors provide personalized coaching, ensuring that each student receives the guidance they need to excel in their musical journey.",
   },
   {
     number: "02",

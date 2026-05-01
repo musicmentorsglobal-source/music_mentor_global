@@ -60,7 +60,7 @@ const buildEmailHtml = ({ name, email, phone, notes }) => {
   const safeEmail = escapeHtml(email);
   const safePhone = escapeHtml(phone);
   const safeNotes = escapeHtml(notes || "No additional notes were provided.");
-  const safeBrand = escapeHtml(process.env.FROM_NAME || "Music Mentor Global");
+  const safeBrand = escapeHtml(process.env.FROM_NAME || "Music Mentors Global");
 
   return `
     <!doctype html>
@@ -134,7 +134,7 @@ const buildEmailHtml = ({ name, email, phone, notes }) => {
 };
 
 const buildEmailText = ({ name, email, phone, notes }) => {
-  const brand = process.env.FROM_NAME || "Music Mentor Global";
+  const brand = process.env.FROM_NAME || "Music Mentors Global";
 
   return [
     `New contact enquiry received for ${brand}`,

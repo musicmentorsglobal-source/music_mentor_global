@@ -15,10 +15,10 @@ const Footer = () => {
           {/* Logo & Description */}
           <div>
             <div className="brand-wordmark mb-4">
-              <span className="brand-wordmark__title music-gradient text-[2rem] md:text-[2.25rem]">Music Mendor Global</span>
+              <span className="brand-wordmark__title music-gradient text-[2rem] md:text-[2.25rem]">Music Mentors Global</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              At Music Mendor Global, we are dedicated to nurturing your musical talents through expert instruction and personalized lessons.
+              At Music Mentors Global, we are dedicated to nurturing your musical talents through expert instruction and personalized lessons.
             </p>
             <div className="flex gap-4">
               <a href="#" aria-label="Facebook" className="gradient-icon-button flex h-10 w-10 items-center justify-center rounded-full">
@@ -74,7 +74,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/10 pt-6 text-center">
           <p className="text-primary-foreground/50 text-sm">
-            © {new Date().getFullYear()} Music Mendor Global. All rights reserved.
+            © {new Date().getFullYear()} Music Mentors Global. All rights reserved.
           </p>
         </div>
       </div>

@@ -82,7 +82,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           <a href="#hero">
             <div className="brand-wordmark">
-              <span className="brand-wordmark__title music-gradient text-[2rem] md:text-[2.35rem]">Music Mendor Global</span>
+              <span className="brand-wordmark__title music-gradient text-[2rem] md:text-[2.35rem]">Music Mentors Global</span>
             </div>
           </a>
 

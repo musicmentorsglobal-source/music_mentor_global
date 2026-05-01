@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { Button } from "@/components/ui/button";
 
 const slides = [
   {
@@ -9,21 +8,21 @@ const slides = [
     title: "Education In Harmony With",
     highlight: "Music",
     description:
-      "Join Music Mendor Global And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
+      "Join Music Mentors Global And Unlock Your Musical Potential With Expert Guidance, Personalized Lessons, And A Supportive Learning Environment. Let Your Musical Journey Begin Today!",
   },
   {
-    subtitle: "Best Ballet Studio",
+    subtitle: "The Mentor Studio",
     title: "Master the Art of Music With",
     highlight: "Us",
     description:
-      "Music Mendor Global offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
+      "Music Mentors Global offers expert guidance, personalized lessons, and a welcoming space to help you unlock your musical abilities. Start your musical journey with us today!",
   },
   {
-    subtitle: "Grand Ceremony",
-    title: "Teaching Tunes, Creating",
-    highlight: "Stars",
+    subtitle: "The Path to Performance",
+    title: "Building Artists, One Note at a",
+    highlight: "Time",
     description:
-      "At Music Mendor Global, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
+      "At Music Mentors Global, we help you master your instrument with expert lessons, personalized attention, and a supportive atmosphere. Begin your musical adventure today!",
   },
 ];
 
@@ -78,9 +77,6 @@ const HeroSection = () => {
                   <p className="text-primary-foreground/80 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
                     {slide.description}
                   </p>
-                  <Button className="bg-primary text-primary-foreground rounded-full px-8 py-6 text-base font-semibold uppercase tracking-wider hover:bg-primary/90">
-                    Read More
-                  </Button>
                 </div>
               </div>
             </div>
