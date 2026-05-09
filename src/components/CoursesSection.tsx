@@ -5,7 +5,6 @@ import MusicCornerDecor from "@/components/MusicCornerDecor";
 const courses = [
   { name: "Online Guitar Classes", image: "/images/guitar.png" },
   { name: "Online Piano Classes", image: "/images/piano.png" },
-  { name: "Online Vocal Classes", image: "/images/vocal_class.jpeg" },
   { name: "Hindustani Vocal Tutoring", image: "/img/Hindustani_Vocal.jpeg" },
   { name: "Live Music Webinars", image: "/images/keyboard.png" },
   { name: "Music Consultancy for Schools and Colleges", image: "/images/violin.png" },
