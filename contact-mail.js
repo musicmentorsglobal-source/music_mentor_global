@@ -10,7 +10,10 @@ const REQUIRED_ENV_VARS = [
 ];
 
 export const getMissingEnvVars = () =>
-  REQUIRED_ENV_VARS.filter((key) => !process.env[key]);
+  getMissingEnvVarsFrom(process.env);
+
+export const getMissingEnvVarsFrom = (env = {}) =>
+  REQUIRED_ENV_VARS.filter((key) => !env[key]);
 
 const escapeHtml = (value = "") =>
   value
@@ -55,12 +58,12 @@ export const validatePayload = (payload) => {
   };
 };
 
-const buildEmailHtml = ({ name, email, phone, notes }) => {
+const buildEmailHtml = ({ name, email, phone, notes }, env = process.env) => {
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safePhone = escapeHtml(phone);
   const safeNotes = escapeHtml(notes || "No additional notes were provided.");
-  const safeBrand = escapeHtml(process.env.FROM_NAME || "Music Mentors Global");
+  const safeBrand = escapeHtml(env.FROM_NAME || "Music Mentors Global");
 
   return `
     <!doctype html>
@@ -133,8 +136,8 @@ const buildEmailHtml = ({ name, email, phone, notes }) => {
   `;
 };
 
-const buildEmailText = ({ name, email, phone, notes }) => {
-  const brand = process.env.FROM_NAME || "Music Mentors Global";
+const buildEmailText = ({ name, email, phone, notes }, env = process.env) => {
+  const brand = env.FROM_NAME || "Music Mentors Global";
 
   return [
     `New contact enquiry received for ${brand}`,
@@ -150,27 +153,27 @@ const buildEmailText = ({ name, email, phone, notes }) => {
   ].join("\n");
 };
 
-const createTransporter = () =>
+const createTransporter = (env = process.env) =>
   nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 587),
-    secure: Number(process.env.SMTP_PORT) === 465,
+    host: env.SMTP_HOST,
+    port: Number(env.SMTP_PORT || 587),
+    secure: Number(env.SMTP_PORT) === 465,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
+      user: env.SMTP_USER,
+      pass: env.SMTP_PASSWORD,
     },
   });
 
-export const sendContactEmail = async (data) => {
-  const transporter = createTransporter();
-  const notificationRecipient = process.env.NOTIFICATION_EMAIL || process.env.FROM_EMAIL;
+export const sendContactEmail = async (data, env = process.env) => {
+  const transporter = createTransporter(env);
+  const notificationRecipient = env.NOTIFICATION_EMAIL || env.FROM_EMAIL;
 
   await transporter.sendMail({
-    from: `"${process.env.FROM_NAME}" <${process.env.FROM_EMAIL}>`,
+    from: `"${env.FROM_NAME}" <${env.FROM_EMAIL}>`,
     to: notificationRecipient,
     replyTo: `${data.name} <${data.email}>`,
     subject: `New contact enquiry from ${data.name}`,
-    text: buildEmailText(data),
-    html: buildEmailHtml(data),
+    text: buildEmailText(data, env),
+    html: buildEmailHtml(data, env),
   });
 };
