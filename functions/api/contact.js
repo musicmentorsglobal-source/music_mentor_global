@@ -15,7 +15,7 @@ const json = (body, init = {}) =>
     },
   });
 
-export const onRequest = async ({ request, env }) => {
+export const handleContactRequest = async ({ request, env }) => {
   if (request.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
@@ -70,3 +70,5 @@ export const onRequest = async ({ request, env }) => {
     );
   }
 };
+
+export const onRequest = handleContactRequest;
